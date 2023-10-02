@@ -18,10 +18,10 @@
 
     <div class="grid">
         <div class="sidenav">
-            <a href="/dashboard">Home</a>
-            <a href="/products">Products</a>
-            <a href="" >Shops</a>
-            <a href="">Graphs</a>
+            <a id="{% if request.path == '/' %}active{% endif %}" href="dashboard/">Home</a>
+            <a id="{% if request.path == 'products/' %}active{% endif %}" href="products/">Products</a>
+            <a id="{% if request.path == 'shops/' %}active{% endif %}" href="shops/" >Shops</a>
+            <a id="{% if request.path == 'graphs/' %}active{% endif %}" href="">Graphs</a>
         </div>
         <!-- Add Content Here -->
         {% block content %}
