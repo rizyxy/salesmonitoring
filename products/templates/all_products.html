@@ -1,0 +1,44 @@
+{% extends 'master.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'all_product.css' %}">
+<link rel="stylesheet" href="{% static 'table.css' %}">
+{% endblock %}
+
+
+{% block title %} All Products {% endblock %}
+
+{% block content %}
+
+<div class="content">
+    <div class="content-header">
+        <form action="" class="search-form">
+            <input class="search-bar" type="text" placeholder="Search">
+        </form>
+        <button class="header-button">Filter</button>
+        <button class="header-button">Add Product</button>
+    </div>
+    <table class="products-table">
+        <tr>
+            <th>Name</th>
+            <th>Shop</th>
+            <th>Price</th>
+            <th>Sales</th>
+        </tr>
+        <tr>
+            <td>Samsung S23 Ultra</td>
+            <td>AliBaba Cell</td>
+            <td>Rp 23.000.000</td>
+            <td>200</td>
+        </tr>
+        <tr>
+            <td>Samsung S23 Ultra</td>
+            <td>AliBaba Cell</td>
+            <td>Rp 23.000.000</td>
+            <td>200</td>
+        </tr>
+    </table>
+</div>
+
+{% endblock %}
