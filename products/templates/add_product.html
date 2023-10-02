@@ -1,0 +1,23 @@
+{% extends 'master.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'add_product.css' %}">
+{% endblock %}
+
+
+{% block title %} Add Product {% endblock %}
+
+{% block content %}
+
+<div class="content">
+    <form action="" class="add-product-form">
+        <input type="text" name="" id="url-field" placeholder="Product URL">
+        <select name="" id="shop-field">
+            <option value="AliBaba Cell">AliBaba Cell</option>
+        </select>
+        <button id="add-button">Add Product</button>
+    </form>
+</div>
+
+{% endblock %}
