@@ -10,3 +10,7 @@ def all_products(request):
     }
 
     return HttpResponse(template.render(context, request))
+
+def add_product(request):
+    template = loader.get_template('add_product.html')
+    return HttpResponse(template.render(None, request))
