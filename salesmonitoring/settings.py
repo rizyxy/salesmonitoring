@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'master',
     'products',
     'shops',
-    'graph'
+    'graph',
+    'events'
 ]
 
 MIDDLEWARE = [
