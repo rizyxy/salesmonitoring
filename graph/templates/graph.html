@@ -2,123 +2,33 @@
 
 {% block css %}
 {% load static %}
-<link rel="stylesheet" href="{% static 'all_shops.css' %}">
-<link rel="stylesheet" href="{% static 'table.css' %}">
+<link rel="stylesheet" href="{% static 'all_graph.css' %}">
 {% endblock %}
 
 
-{% block title %} All Products {% endblock %}
+{% block title %} All Graphs {% endblock %}
 
 {% block content %}
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graph Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-
-
-        .content a {
-            text-decoration: none;
-            font-size: 18px;
-            color: black;
-            display: block;
-            width: 100%;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: bold;
-            margin-bottom: 10px;
-            /* Untuk memberikan jarak antar tautan */
-        }
-
-        .content {
-            margin-left: 250px;
-            padding: 20px;
-        }
-
-        .content button {
-            font-size: 18px;
-            margin-right: 10px;
-        }
-
-        .content img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 10px;
-        }
-
-        .yearmonthweak {
-            display: flex;
-        }
-
-        .cityproductsales {
-            display: flex;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="content">
-        <h1>Graph Page</h1>
-        <div class="yearmonthweak">
-            <a href="#" onclick="changeContent('Year')">Year</a>
-            <a href="#" onclick="changeContent('Month')">Month</a>
-            <a href="#" onclick="changeContent('Week')">Week</a>
-        </div>
-        <h2 id="page-title">Year</h2>
-        <div class="cityproductsales">
-            <a href="#">City Sales</a>
-            <!-- <img id="city-sales-image" src="city_sales_image.jpg" alt="City Sales Image"> -->
-            <a href="#">Product Sales</a>
-            <!-- <img id="product-sales-image" src="product_sales_image.jpg" alt="Product Sales Image"> -->
-        </div>
-        <div>
-            <canvas id="myChart"></canvas>
-        </div>
-    
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-        <script>
-            const ctx = document.getElementById('myChart');
-    
-            new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 30, 3],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-        </script>
-        <script>
-            function changeContent(page) {
-                document.getElementById('page-title').textContent = page;
-            }
-        </script>
+<div class="content">
+    <h1>Graph Page</h1>
+    <div class="graph-time">
+        <a class="active" id="year" href="#" onclick="activateYear()">Year</a>
+        <a id="month" href="#" onclick="activateMonth()">Month</a>
+        <a id="week" href="#" onclick="activateWeek()">Week</a>
+    </div>
+    <div class="graph-category">
+        <a href="#">City Sales</a>
+        <!-- <img id="city-sales-image" src="city_sales_image.jpg" alt="City Sales Image"> -->
+        <a href="#">Product Sales</a>
+        <!-- <img id="product-sales-image" src="product_sales_image.jpg" alt="Product Sales Image"> -->
+    </div>
+    <div>
+        <canvas id="myChart"></canvas>
     </div>
 
-    
-</body>
-
-</html>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{% static 'graph.js' %}"></script>
+</div>
 
 
 {% endblock %}
