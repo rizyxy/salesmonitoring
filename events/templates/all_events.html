@@ -1,0 +1,44 @@
+{% extends 'master.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'all_events.css' %}">
+<link rel="stylesheet" href="{% static 'table.css' %}">
+{% endblock %}
+
+
+{% block title %} All Events {% endblock %}
+
+{% block content %}
+
+<div class="content">
+    <div class="content-header">
+        <form action="" class="search-form">
+            <input class="search-bar" type="text" placeholder="Search">
+        </form>
+        <button class="header-button">Filter</button>
+        <a class="link-button" href="{% url 'add-shop' %}">Add Event</a>
+    </div>
+    <table class="products-table">
+        <tr>
+            <th>Event Name</th>
+            <th>Participants</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+        </tr>
+        <tr>
+            <td>Bulan UMKM</td>
+            <td>50</td>
+            <td>2 October 2023</td>
+            <td>10 October 2023</td>
+        </tr>
+        <tr>
+            <td>Bulan UMKM</td>
+            <td>50</td>
+            <td>2 October 2023</td>
+            <td>10 October 2023</td>
+        </tr>
+    </table>
+</div>
+
+{% endblock %}
