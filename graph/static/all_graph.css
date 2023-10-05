@@ -1,0 +1,60 @@
+
+.active {
+    font-size: x-large;
+}
+
+.content {
+    width: 80%;
+    margin: auto;
+}
+
+/* .content a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+} */
+
+.content a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    width: 100%;
+}
+
+
+.content button {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.graph-time {
+    display: flex;
+    align-content: center;
+    align-items: end;
+    justify-content: end;
+    height: 100%;
+    margin-bottom: 1em;
+}
+
+.graph-time a:hover {
+    font-size: x-large;
+}
+
+.graph-category {
+    display: flex;
+    margin-bottom: 2em;
+}
+
+.graph-category {
+    display: flex;
+}
