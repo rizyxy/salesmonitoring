@@ -1,0 +1,15 @@
+{% extends 'master.html' %} {% block css %} {% load static %}
+<link rel="stylesheet" href="{% static 'add_events.css' %}" />
+{% endblock %} {% block title %} Add Product {% endblock %} {% block content %}
+
+<div class="content">
+  <form action="" class="add-events-form">
+    <input type="text" name="" id="url-field" placeholder="Events URL" />
+    <select name="" id="shop-field">
+      <option value="AliBaba Cell">AliBaba Cell</option>
+    </select>
+    <button id="add-button">Add Event</button>
+  </form>
+</div>
+
+{% endblock %}
