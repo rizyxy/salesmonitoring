@@ -4,10 +4,12 @@
 
 <div class="content">
   <form action="" class="add-events-form">
-    <input type="text" name="" id="url-field" placeholder="Events URL" />
-    <select name="" id="shop-field">
-      <option value="AliBaba Cell">AliBaba Cell</option>
-    </select>
+    <label for="name">Event Name</label>
+    <input type="text" name="name" class="url-field" placeholder="Event Name" />
+    <label for="start">Start DateTime</label>
+    <input type="datetime-local" name="start" class="url-field" placeholder="Start DateTime">
+    <label for="end">End DateTime</label>
+    <input type="datetime-local" name="end" class="url-field" placeholder="End DateTime">
     <button id="add-button">Add Event</button>
   </form>
 </div>

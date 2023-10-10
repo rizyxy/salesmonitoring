@@ -13,18 +13,23 @@
   flex-direction: column; /* Stack elements vertically */
 }
 
-#url-field {
+label {
+  margin-top: 1em;
+}
+
+.url-field {
+  margin: 1em 0em;
   background-color: #efefef;
   border-radius: 1em;
   padding: 1em 2em;
   border: none;
 }
 
-#url-field:focus {
+.url-field:focus {
   outline: none;
 }
 
-#shop-field {
+.shop-field {
   border-radius: 1em;
   background-color: #efefef;
   padding: 1em 2em;
